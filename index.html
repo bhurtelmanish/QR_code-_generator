@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code generator using vanilla js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <link rel = "stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-data">
+            <h2>QR code generator</h2>
+            <input type="text" class="user-name input" placeholder="Enter your name...">
+            <input type="email" class="user-email input" placeholder="Enter your email...">
+            <input type="number" class="user-phone input" placeholder="Enter your number...">
+            <button class="generate-qr-code">Generate QR code</button>
+        </div>
+        <div class="qr-canvas">
+            <h2>QR code</h2>
+            <div class="loading"></div>
+            <img src="" alt="" class="qr-image">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

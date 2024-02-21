@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.2s ease;
+    text-decoration: none !important;
+}
+
+:root{
+    --blueColor : #1DA1F2;
+    --blueColorHover : #1A8CD8;
+    --blackColor : #14171A;
+    --darkColor :#202327;
+    --grayColor: #AAB8C2;
+    --darkTextColor: #4A4C4E;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blackColor);
+    color:white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:2rem;
+    height: auto;
+    width:auto;
+    flex-wrap: wrap;
+}
+.user-data{
+    height: 22rem;
+    width:21rem;
+    background-color: var(--darkColor);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem;
+}
+.user-data > h2{
+    margin-bottom: 1rem;
+}
+.input , .generate-qr-code{
+    height: 2.7rem;
+    width:100%;
+    border:none;
+    outline:none;
+    border-radius: 0.7rem;
+    font-size: 0.9rem;
+}
+.input{
+    padding: 0 1rem 0 0.5rem;
+    background-color: #313336;
+    color:white;
+    /* font-size: 0.95rem; */
+}
+.generate-qr-code{
+    background-color: var(--blueColor);
+    color:white;
+    cursor: pointer;
+    font-weight: 600;
+}
+.generate-qr-code:hover{
+    background-color: var(--blueColorHover);
+}
+.qr-canvas{
+    background-color: white;
+    height: 15rem;
+    width:15rem;
+    border-radius: 1rem;
+    position: relative;
+}
+.qr-canvas > h2{
+    color:black;
+    text-align: center;
+    margin: 1rem;
+}
+.qr-image{
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.loading{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top:40%;
+    left:40%;
+    border:7px solid var(--blueColor);
+    border-top-color: white;
+    animation: spin 1s infinite;
+    display: none;
+    /* background-color: red; */
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
